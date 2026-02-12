@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Little Sister 🎂</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(45deg, #ffd6e0, #fff1c1);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    h1 {
+        color: #ff1493;
+        font-size: 45px;
+        margin-top: 40px;
+    }
+
+    .wish {
+        font-size: 22px;
+        color: purple;
+    }
+
+    /* Moving Button */
+    #funBtn {
+        position: absolute;
+        padding: 12px 25px;
+        font-size: 18px;
+        background-color: #ff1493;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        top: 60%;
+        left: 45%;
+        transition: 0.4s;
+    }
+
+    /* Emoji Area */
+    #funArea {
+        margin-top: 100px;
+        font-size: 50px;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🎉 Happy Birthday Little Sister 🎉</h1>
+
+<p class="wish">
+    🎂 वाढदिवसाच्या खूप खूप शुभेच्छा!  
+    नेहमी हसत रहा आणि सगळ्यांना हसवत रहा 😄
+</p>
+
+<button id="funBtn" onclick="showFun()">Click On This 😜</button>
+
+<div id="funArea">
+    😂 🎉 🥳 🍫 🎂 😜 💃 🦄 🌈 💖
+    <p>Surprise!!! You are officially one year more naughty 😆</p>
+</div>
+
+<script>
+let btn = document.getElementById("funBtn");
+
+btn.addEventListener("mouseover", function() {
+    let x = Math.random() * (window.innerWidth - 150);
+    let y = Math.random() * (window.innerHeight - 100);
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+    btn.style.transform = "rotate(" + (Math.random()*360) + "deg)";
+});
+
+function showFun() {
+    document.getElementById("funArea").style.display = "block";
+}
+</script>
+
+</body>
+</html>
